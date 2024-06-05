@@ -11,7 +11,7 @@ function searchBooks() {
       data.items.forEach(item => {
           const title = item.volumeInfo.title;
           const authors = item.volumeInfo.authors ? item.volumeInfo.authors.join(', ') : 'Unknown';
-          const thumbnail = item.volumeInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/150';
+          const thumbnail = item.volumeInfo.imageLinks.thumbnail ? item.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/150';
 
           const bookDiv = document.createElement('div');
           bookDiv.classList.add('book');
